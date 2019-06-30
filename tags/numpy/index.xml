@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>numpy on Academic</title>
+    <title>numpy on Nudging Towards Data Science</title>
     <link>/tags/numpy/</link>
-    <description>Recent content in numpy on Academic</description>
+    <description>Recent content in numpy on Nudging Towards Data Science</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
+    <copyright>Yang Yu {year} &amp;copy;</copyright>
     <lastBuildDate>Sat, 29 Jun 2019 08:30:11 +0200</lastBuildDate>
     
 	    <atom:link href="/tags/numpy/index.xml" rel="self" type="application/rss+xml" />
@@ -19,7 +20,9 @@
       <guid>/post/multivariate-gaussian-distribution/</guid>
       <description>&lt;p&gt;Multivariate gaussian model&lt;/p&gt;
 
-&lt;p&gt;$$f_\boldsymbol{x}(x_1, x_2,&amp;hellip;, x_n) = \frac{1}{\sqrt{(2 \pi)^k} det(\boldsymbol{\Sigma})} \mathrm{exp}(-\frac{1}{2}(\boldsymbol{x}-\boldsymbol{\mu})^\mathrm{T}\boldsymbol{\Sigma}^{-1}(\boldsymbol{x}-\boldsymbol{\mu}))$$&lt;/p&gt;
+&lt;p&gt;$$f_\boldsymbol{x}(x_1, x_2,&amp;hellip;, x_n) \propto \mathrm{exp}(-\frac{1}{2}(\boldsymbol{x}-\boldsymbol{\mu})^\mathrm{T}\boldsymbol{\Sigma}^{-1}(\boldsymbol{x}-\boldsymbol{\mu})),$$&lt;/p&gt;
+
+&lt;p&gt;and the normalization factor is given by $$\frac{1}{\sqrt{(2 \pi)^k} det(\boldsymbol{\Sigma})}.$$&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;#plot Multivariate gaussian 
 #using tensor contraction (mnn)(mm)(mnn)-&amp;gt;nn, which gives &#39;i...,ii,i...&#39;
@@ -28,15 +31,24 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-x = np.linspace(-1000,1000,300)
+x = np.linspace(-4,4,200)
 x1, x2 = np.meshgrid(x, x)
-covariance_matrix = np.identity(2)
-mu = np.array([-400,300])
-density_matrix=np.einsum(&#39;i...,ii,i...&#39;, np.array([x1-mu[0],x2-mu[1]]), covariance_matrix, np.array([x1-mu[0],x2-mu[1]]))
-plt.contourf(x1, x2, density_matrix)
+covar = np.array([[[1,0], [0, 1]],[[0.2,0], [0, 1]],[[0.2,-0.4], [-0.4, 1]],[[0.2,.4], [.4, 1]]])
+mu_vec = np.array([1,1])
+print(str(mu_vec.tostring))
+shifted_mu_vec = np.array([x1-mu_vec[0],x2-mu_vec[1]])
+for i in range(4):
+    tensor_contraction=np.einsum(&#39;i...,ij,j...&#39;, shifted_mu_vec, np.linalg.inv(covar[i]), shifted_mu_vec)
+    density_matrix = np.exp(-0.5*tensor_contraction)
+    plt.subplot(2,2, i+1)
+    plt.contourf(x1, x2, density_matrix, cmap = &#39;jet&#39;)   
+    plt.title(&#39;covariance_matrix=%s&#39; % covar[i].tolist())
 plt.show()
 
+
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;mvn.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     

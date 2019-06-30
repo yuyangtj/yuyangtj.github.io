@@ -41,7 +41,7 @@
   
   
   
-  <meta name="theme-color" content="#2962ff">
+  <meta name="theme-color" content="#3f51b5">
   
 
   
@@ -82,7 +82,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.a9a796b4dba28c78fc94d2550173437e.css">
+  <link rel="stylesheet" href="/css/academic.min.fe324a743d05bd8bed782fb421e8bf36.css">
 
   
 
@@ -91,8 +91,8 @@
   
 
   
-  <link rel="alternate" href="/tags/statitics/index.xml" type="application/rss+xml" title="Academic">
-  <link rel="feed" href="/tags/statitics/index.xml" type="application/rss+xml" title="Academic">
+  <link rel="alternate" href="/tags/statitics/index.xml" type="application/rss+xml" title="Nudging Towards Data Science">
+  <link rel="feed" href="/tags/statitics/index.xml" type="application/rss+xml" title="Nudging Towards Data Science">
   
 
   <link rel="manifest" href="/site.webmanifest">
@@ -110,9 +110,9 @@
   
   <meta property="twitter:card" content="summary">
   
-  <meta property="og:site_name" content="Academic">
+  <meta property="og:site_name" content="Nudging Towards Data Science">
   <meta property="og:url" content="/tags/statitics/">
-  <meta property="og:title" content="statitics | Academic">
+  <meta property="og:title" content="statitics | Nudging Towards Data Science">
   <meta property="og:description" content="Postdoctoral Researcher"><meta property="og:image" content="/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
@@ -128,7 +128,7 @@
 
 
 
-  <title>statitics | Academic</title>
+  <title>statitics | Nudging Towards Data Science</title>
 
 </head>
 
@@ -172,7 +172,7 @@
   <div class="container">
 
     
-      <a class="navbar-brand" href="/">Academic</a>
+      <a class="navbar-brand" href="/">Nudging Towards Data Science</a>
       
       <button type="button" class="navbar-toggler" data-toggle="collapse"
               data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -185,7 +185,7 @@
 
       
       
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav ml-auto">
         
 
         
@@ -269,6 +269,35 @@
         
 
         <li class="nav-item">
+          <a class="nav-link " href="/#tags"><span></span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
           <a class="nav-link " href="/#projects"><span>Projects</span></a>
         </li>
 
@@ -298,44 +327,12 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+          <a class="nav-link " href="/#tags"><span>Tags</span></a>
         </li>
 
         
         
 
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-          
-          
-          
-            
-          
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/#contact"><span>Contact</span></a>
-        </li>
-
-        
-        
-
-      
-      </ul>
-      <ul class="navbar-nav ml-auto">
       
 
         
@@ -401,8 +398,9 @@
     <div class="article-style">
       
       Multivariate gaussian model
-$$f_\boldsymbol{x}(x_1, x_2,&hellip;, x_n) = \frac{1}{\sqrt{(2 \pi)^k} det(\boldsymbol{\Sigma})} \mathrm{exp}(-\frac{1}{2}(\boldsymbol{x}-\boldsymbol{\mu})^\mathrm{T}\boldsymbol{\Sigma}^{-1}(\boldsymbol{x}-\boldsymbol{\mu}))$$
-#plot Multivariate gaussian #using tensor contraction (mnn)(mm)(mnn)-&gt;nn, which gives 'i...,ii,i...' #n is the # of variates, and m is the # of observations import numpy as np import matplotlib.pyplot as plt x = np.linspace(-1000,1000,300) x1, x2 = np.meshgrid(x, x) covariance_matrix = np.identity(2) mu = np.array([-400,300]) density_matrix=np.einsum('i...,ii,i...', np.array([x1-mu[0],x2-mu[1]]), covariance_matrix, np.array([x1-mu[0],x2-mu[1]])) plt.contourf(x1, x2, density_matrix) plt.show()  
+$$f_\boldsymbol{x}(x_1, x_2,&hellip;, x_n) \propto \mathrm{exp}(-\frac{1}{2}(\boldsymbol{x}-\boldsymbol{\mu})^\mathrm{T}\boldsymbol{\Sigma}^{-1}(\boldsymbol{x}-\boldsymbol{\mu})),$$
+and the normalization factor is given by $$\frac{1}{\sqrt{(2 \pi)^k} det(\boldsymbol{\Sigma})}.$$
+#plot Multivariate gaussian #using tensor contraction (mnn)(mm)(mnn)-&gt;nn, which gives 'i...,ii,i...' #n is the # of variates, and m is the # of observations import numpy as np import matplotlib.pyplot as plt x = np.linspace(-4,4,200) x1, x2 = np.meshgrid(x, x) covar = np.array([[[1,0], [0, 1]],[[0.2,0], [0, 1]],[[0.2,-0.4], [-0.4, 1]],[[0.2,.4], [.4, 1]]]) mu_vec = np.
       
     </div>
   </div>
@@ -447,6 +445,8 @@ $$f_\boldsymbol{x}(x_1, x_2,&hellip;, x_n) = \frac{1}{\sqrt{(2 \pi)^k} det(\bold
 
     
     
+    
+    <script id="dsq-count-scr" src="//disqus_PBNcdWQb5j.disqus.com/count.js" async></script>
     
 
     
@@ -528,7 +528,7 @@ $$f_\boldsymbol{x}(x_1, x_2,&hellip;, x_n) = \frac{1}{\sqrt{(2 \pi)^k} det(\bold
   
 
   <p class="powered-by">
-    
+    Yang Yu 2019 &copy; &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
