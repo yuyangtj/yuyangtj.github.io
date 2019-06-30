@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stockholm on Nudging Towards Data Science</title>
+    <link>/tags/stockholm/</link>
+    <description>Recent content in Stockholm on Nudging Towards Data Science</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>Yang Yu {year} &amp;copy;</copyright>
+    <lastBuildDate>Sun, 30 Jun 2019 22:18:34 +0200</lastBuildDate>
+    
+	    <atom:link href="/tags/stockholm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>I Love STHLM</title>
+      <link>/post/i_love_sthlm/</link>
+      <pubDate>Sun, 30 Jun 2019 22:18:34 +0200</pubDate>
+      
+      <guid>/post/i_love_sthlm/</guid>
+      <description>&lt;p&gt;I ❤️ STHLM!
+&lt;img src=&#34;gashaga.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;sthlm.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

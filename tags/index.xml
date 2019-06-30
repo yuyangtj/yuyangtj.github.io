@@ -7,10 +7,19 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>Yang Yu {year} &amp;copy;</copyright>
-    <lastBuildDate>Sat, 29 Jun 2019 08:30:11 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 30 Jun 2019 22:18:34 +0200</lastBuildDate>
     
 	    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Stockholm</title>
+      <link>/tags/stockholm/</link>
+      <pubDate>Sun, 30 Jun 2019 22:18:34 +0200</pubDate>
+      
+      <guid>/tags/stockholm/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>numpy</title>
