@@ -37,7 +37,7 @@
 &lt;p&gt;and the normalization factor is given by $$\frac{1}{\sqrt{(2 \pi)^k} det(\boldsymbol{\Sigma})}.$$&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;#plot Multivariate gaussian 
-#using tensor contraction (mnn)(mm)(mnn)-&amp;gt;nn, which gives &#39;i...,ii,i...&#39;
+#using tensor contraction (imn)(ij)(jmn)-&amp;gt;jmn, which gives &#39;i...,ij,j...&#39;
 #n is the # of variates, and m is the # of observations
 
 import numpy as np
