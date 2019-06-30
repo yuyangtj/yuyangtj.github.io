@@ -3,41 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/</loc>
-    <lastmod>2019-06-29T08:30:11+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/post/multivariate-gaussian-distribution/</loc>
-    <lastmod>2019-06-29T08:30:11+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2019-06-29T08:30:11+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2019-06-29T08:30:11+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/numpy/</loc>
-    <lastmod>2019-06-29T08:30:11+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/statitics/</loc>
-    <lastmod>2019-06-29T08:30:11+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/authors/admin/</loc>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -51,6 +22,10 @@
   </url>
   
   <url>
+    <loc>/post/</loc>
+  </url>
+  
+  <url>
     <loc>/publication_types/</loc>
     <priority>0</priority>
   </url>
@@ -61,6 +36,11 @@
   
   <url>
     <loc>/talk/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <priority>0</priority>
   </url>
   
 </urlset>
