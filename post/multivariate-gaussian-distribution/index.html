@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="Multivariate gaussian model
+  <meta name="description" content="Multivariate gaussian model Multivariate gaussian model Multivariate gaussian model
 $$f_\boldsymbol{x}(x_1, x_2,&hellip;, x_n) = \frac{1}{\sqrt{(2 \pi)^k} det(\boldsymbol{\Sigma})} \mathrm{exp}(-\frac{1}{2}(\boldsymbol{x}-\boldsymbol{\mu})^\mathrm{T}\boldsymbol{\Sigma}^{-1}(\boldsymbol{x}-\boldsymbol{\mu}))$$
 #plot Multivariate gaussian #using tensor contraction (mnn)(mm)(mnn)-&gt;nn, which gives &#39;i...,ii,i...&#39; #n is the # of variates, and m is the # of observations import numpy as np import matplotlib.pyplot as plt x = np.linspace(-1000,1000,300) x1, x2 = np.meshgrid(x, x) covariance_matrix = np.identity(2) mu = np.array([-400,300]) density_matrix=np.einsum(&#39;i...,ii,i...&#39;, np.array([x1-mu[0],x2-mu[1]]), covariance_matrix, np.array([x1-mu[0],x2-mu[1]])) plt.contourf(x1, x2, density_matrix) plt.show()  ">
 
@@ -112,7 +112,7 @@ $$f_\boldsymbol{x}(x_1, x_2,&hellip;, x_n) = \frac{1}{\sqrt{(2 \pi)^k} det(\bold
   <meta property="og:site_name" content="Academic">
   <meta property="og:url" content="/post/multivariate-gaussian-distribution/">
   <meta property="og:title" content="Multivariate Gaussian Distribution | Academic">
-  <meta property="og:description" content="Multivariate gaussian model
+  <meta property="og:description" content="Multivariate gaussian model Multivariate gaussian model Multivariate gaussian model
 $$f_\boldsymbol{x}(x_1, x_2,&hellip;, x_n) = \frac{1}{\sqrt{(2 \pi)^k} det(\boldsymbol{\Sigma})} \mathrm{exp}(-\frac{1}{2}(\boldsymbol{x}-\boldsymbol{\mu})^\mathrm{T}\boldsymbol{\Sigma}^{-1}(\boldsymbol{x}-\boldsymbol{\mu}))$$
 #plot Multivariate gaussian #using tensor contraction (mnn)(mm)(mnn)-&gt;nn, which gives &#39;i...,ii,i...&#39; #n is the # of variates, and m is the # of observations import numpy as np import matplotlib.pyplot as plt x = np.linspace(-1000,1000,300) x1, x2 = np.meshgrid(x, x) covariance_matrix = np.identity(2) mu = np.array([-400,300]) density_matrix=np.einsum(&#39;i...,ii,i...&#39;, np.array([x1-mu[0],x2-mu[1]]), covariance_matrix, np.array([x1-mu[0],x2-mu[1]])) plt.contourf(x1, x2, density_matrix) plt.show()  "><meta property="og:image" content="/img/icon-192.png">
   <meta property="og:locale" content="en-us">
@@ -541,7 +541,9 @@ $$f_\boldsymbol{x}(x_1, x_2,&hellip;, x_n) = \frac{1}{\sqrt{(2 \pi)^k} det(\bold
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      <p>Multivariate gaussian model</p>
+      <p>Multivariate gaussian model
+Multivariate gaussian model
+Multivariate gaussian model</p>
 
 <p>$$f_\boldsymbol{x}(x_1, x_2,&hellip;, x_n) = \frac{1}{\sqrt{(2 \pi)^k} det(\boldsymbol{\Sigma})} \mathrm{exp}(-\frac{1}{2}(\boldsymbol{x}-\boldsymbol{\mu})^\mathrm{T}\boldsymbol{\Sigma}^{-1}(\boldsymbol{x}-\boldsymbol{\mu}))$$</p>
 
