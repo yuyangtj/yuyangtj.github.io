@@ -28,10 +28,12 @@
   
     
   
-  <meta name="description" content="Postdoctoral Researcher">
+  <meta name="description" content="Multivariate gaussian model
+$$f_\boldsymbol{x}(x_1, x_2,&hellip;, x_n) = \frac{1}{\sqrt{(2 \pi)^k} det(\boldsymbol{\Sigma})} \mathrm{exp}(-\frac{1}{2}(\boldsymbol{x}-\boldsymbol{\mu})^\mathrm{T}\boldsymbol{\Sigma}^{-1}(\boldsymbol{x}-\boldsymbol{\mu}))$$
+#plot Multivariate gaussian #using tensor contraction (mnn)(mm)(mnn)-&gt;nn, which gives &#39;i...,ii,i...&#39; #n is the # of variates, and m is the # of observations import numpy as np import matplotlib.pyplot as plt x = np.linspace(-1000,1000,300) x1, x2 = np.meshgrid(x, x) covariance_matrix = np.identity(2) mu = np.array([-400,300]) density_matrix=np.einsum(&#39;i...,ii,i...&#39;, np.array([x1-mu[0],x2-mu[1]]), covariance_matrix, np.array([x1-mu[0],x2-mu[1]])) plt.contourf(x1, x2, density_matrix) plt.show()  ">
 
   
-  <link rel="alternate" hreflang="en-us" href="/404.html">
+  <link rel="alternate" hreflang="en-us" href="/post/multivariate-gaussian-distribution/">
 
   
 
@@ -96,7 +98,7 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/404.html">
+  <link rel="canonical" href="/post/multivariate-gaussian-distribution/">
 
   
   
@@ -108,24 +110,28 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Academic">
-  <meta property="og:url" content="/404.html">
-  <meta property="og:title" content="404 Page not found | Academic">
-  <meta property="og:description" content="Postdoctoral Researcher"><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:url" content="/post/multivariate-gaussian-distribution/">
+  <meta property="og:title" content="Multivariate Gaussian Distribution | Academic">
+  <meta property="og:description" content="Multivariate gaussian model
+$$f_\boldsymbol{x}(x_1, x_2,&hellip;, x_n) = \frac{1}{\sqrt{(2 \pi)^k} det(\boldsymbol{\Sigma})} \mathrm{exp}(-\frac{1}{2}(\boldsymbol{x}-\boldsymbol{\mu})^\mathrm{T}\boldsymbol{\Sigma}^{-1}(\boldsymbol{x}-\boldsymbol{\mu}))$$
+#plot Multivariate gaussian #using tensor contraction (mnn)(mm)(mnn)-&gt;nn, which gives &#39;i...,ii,i...&#39; #n is the # of variates, and m is the # of observations import numpy as np import matplotlib.pyplot as plt x = np.linspace(-1000,1000,300) x1, x2 = np.meshgrid(x, x) covariance_matrix = np.identity(2) mu = np.array([-400,300]) density_matrix=np.einsum(&#39;i...,ii,i...&#39;, np.array([x1-mu[0],x2-mu[1]]), covariance_matrix, np.array([x1-mu[0],x2-mu[1]])) plt.contourf(x1, x2, density_matrix) plt.show()  "><meta property="og:image" content="/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
+  <meta property="article:published_time" content="2019-06-29T08:30:11&#43;02:00">
   
-  
-
-  
-
-
+  <meta property="article:modified_time" content="2019-06-29T08:30:11&#43;02:00">
   
 
+  
+
+
+  
 
 
 
 
-  <title>404 Page not found | Academic</title>
+
+  <title>Multivariate Gaussian Distribution | Academic</title>
 
 </head>
 
@@ -358,33 +364,333 @@
 </nav>
 
 
-  <div class="universal-wrapper pt-3">
-
-  <h1>Page not found</h1>
-
-  
-  
-  <form class="d-flex align-items-center mb-3">
-    <input name="q" type="search" class="form-control" id="search-query" placeholder="Search..." autocomplete="off">
-  </form>
-  
+  <article class="article" itemscope itemtype="http://schema.org/Article">
 
   
 
-  <p>Perhaps you were looking for one of these?</p>
+
+
+
+
+
+
+
+
+
+
+
+  
 
   
   
   
-  <h2>Latest</h2>
-  <ul>
+<div class="article-container pt-3">
+  <h1 itemprop="name">Multivariate Gaussian Distribution</h1>
+
+  
+
+  
     
-      <li><a href="/post/multivariate-gaussian-distribution/">Multivariate Gaussian Distribution</a></li>
+
+
+
+<meta content="2019-06-29 08:30:11 &#43;0200 CEST" itemprop="datePublished">
+<meta content="2019-06-29 08:30:11 &#43;0200 CEST" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Jun 29, 2019</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    1 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/post/multivariate-gaussian-distribution/&amp;text=Multivariate%20Gaussian%20Distribution" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/post/multivariate-gaussian-distribution/&amp;t=Multivariate%20Gaussian%20Distribution" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Multivariate%20Gaussian%20Distribution&amp;body=/post/multivariate-gaussian-distribution/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/post/multivariate-gaussian-distribution/&amp;title=Multivariate%20Gaussian%20Distribution" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Multivariate%20Gaussian%20Distribution%20/post/multivariate-gaussian-distribution/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/post/multivariate-gaussian-distribution/&amp;title=Multivariate%20Gaussian%20Distribution" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
     
   </ul>
+</div>
+
+
   
 
 </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      <p>Multivariate gaussian model</p>
+
+<p>$$f_\boldsymbol{x}(x_1, x_2,&hellip;, x_n) = \frac{1}{\sqrt{(2 \pi)^k} det(\boldsymbol{\Sigma})} \mathrm{exp}(-\frac{1}{2}(\boldsymbol{x}-\boldsymbol{\mu})^\mathrm{T}\boldsymbol{\Sigma}^{-1}(\boldsymbol{x}-\boldsymbol{\mu}))$$</p>
+
+<pre><code class="language-python">#plot Multivariate gaussian 
+#using tensor contraction (mnn)(mm)(mnn)-&gt;nn, which gives 'i...,ii,i...'
+#n is the # of variates, and m is the # of observations
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-1000,1000,300)
+x1, x2 = np.meshgrid(x, x)
+covariance_matrix = np.identity(2)
+mu = np.array([-400,300])
+density_matrix=np.einsum('i...,ii,i...', np.array([x1-mu[0],x2-mu[1]]), covariance_matrix, np.array([x1-mu[0],x2-mu[1]]))
+plt.contourf(x1, x2, density_matrix)
+plt.show()
+
+</code></pre>
+
+    </div>
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/numpy/">numpy</a>
+  
+  <a class="badge badge-light" href="/tags/statitics/">statitics</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/">Yang Yu</a></h5>
+      <h6 class="card-subtitle">Postdoctoral Researcher</h6>
+      <p class="card-text" itemprop="description">My research interests include nuclear magnetic resonance.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+          <li>
+            <a itemprop="sameAs" href="mailto:yuyangtj@gmail.com" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://scholar.google.se/citations?user=Zg0CSLQAAAAJ&amp;hl=sv" target="_blank" rel="noopener">
+              <i class="ai ai-google-scholar"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/yuyangtj" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.linkedin.com/in/yang-yu-41029239/" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
 
       
 
