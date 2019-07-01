@@ -25,8 +25,9 @@
 &lt;p&gt;and the normalization factor is given by $$\frac{1}{\sqrt{(2 \pi)^k} det(\boldsymbol{\Sigma})}.$$&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;#plot Multivariate gaussian 
-#using tensor contraction (imn)(ij)(jmn)-&amp;gt;jmn, which gives &#39;i...,ij,j...&#39;
-#n is the # of variates, and m is the # of observations
+#using tensor contraction (imn)(ij)(jmn)-&amp;gt;mn, which gives &#39;i...,ij,j...&#39;
+#i (= j) is the # of variates, (m,n) is the # of grid points, 
+#where the probability density function is calculated
 
 import numpy as np
 import matplotlib.pyplot as plt
