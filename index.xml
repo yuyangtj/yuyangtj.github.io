@@ -38,8 +38,8 @@
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;#plot Multivariate gaussian 
 #using tensor contraction (imn)(ij)(jmn)-&amp;gt;mn, which gives &#39;i...,ij,j...&#39;
-#i (= j) is the # of variates, (m,n) is the # of grid points, 
-#where the probability density function is calculated
+#i (= j) is the # of variates, (m,n) are grid points, where the 
+# probability density function is calculated
 
 import numpy as np
 import matplotlib.pyplot as plt
