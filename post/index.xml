@@ -18,8 +18,14 @@
       <pubDate>Sun, 18 Aug 2019 21:05:29 +0200</pubDate>
       
       <guid>/post/expectation-minimization/</guid>
-      <description>&lt;p&gt;Visualization of EM (Expectation-Minimization) algorithm
-&lt;img src=&#34;giphy.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+      <description>&lt;p&gt;Visualization of EM (Expectation-Minimization) algorithm.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;giphy.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Each symbol represents the conditional probabilities $$p(y=k|x; \theta)$$
+and $$\sum_{k\in(R, B, G)}{p(y=k|x; \theta)}=1$$&lt;/p&gt;
+
+&lt;p&gt;Ellipses represent the 2D Gaussian contour, which captures &amp;gt;99.7% probabilities of the associated Gaussian distribution.&lt;/p&gt;
 </description>
     </item>
     
