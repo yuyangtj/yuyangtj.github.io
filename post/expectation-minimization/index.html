@@ -29,7 +29,7 @@
     
   
   <meta name="description" content="Visualization of EM (Expectation-Minimization) algorithm.
-Each symbol represents the conditional probabilities $$p(y=k{\mid}x; \theta)$$ and $$\sum_{k\in(R, B, G)}{p(y=k{\mid}x; \theta)}=1$$
+Each symbol represents the conditional probabilities $$p(y=k{\mid}x^{(i)}; \theta)$$ and $$\sum_{k\in(R, B, G)}{p(y=k{\mid}x^{(i)}; \theta)}=1$$
 Ellipses represent the 2D Gaussian contour, which captures &gt;99.7% probabilities of the associated Gaussian distribution.">
 
   
@@ -113,7 +113,7 @@ Ellipses represent the 2D Gaussian contour, which captures &gt;99.7% probabiliti
   <meta property="og:url" content="/post/expectation-minimization/">
   <meta property="og:title" content="Expectation Minimization | Nudging Towards Data Science">
   <meta property="og:description" content="Visualization of EM (Expectation-Minimization) algorithm.
-Each symbol represents the conditional probabilities $$p(y=k{\mid}x; \theta)$$ and $$\sum_{k\in(R, B, G)}{p(y=k{\mid}x; \theta)}=1$$
+Each symbol represents the conditional probabilities $$p(y=k{\mid}x^{(i)}; \theta)$$ and $$\sum_{k\in(R, B, G)}{p(y=k{\mid}x^{(i)}; \theta)}=1$$
 Ellipses represent the 2D Gaussian contour, which captures &gt;99.7% probabilities of the associated Gaussian distribution."><meta property="og:image" content="/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
@@ -566,8 +566,8 @@ $$\hat{\mu}_j = \frac{1}{\hat{n}_j}\sum_i\delta(j{\mid}i)x^{(i)}$$
 $$\hat{\sigma}^2_j = \frac{1}{\hat{n}_jd}\sum_i\delta(j{\mid}i){\Vert}x^{(i)}-\mu_j{\Vert}^2$$
 -->
 
-<p>Each symbol represents the conditional probabilities $$p(y=k{\mid}x; \theta)$$
-and $$\sum_{k\in(R, B, G)}{p(y=k{\mid}x; \theta)}=1$$</p>
+<p>Each symbol represents the conditional probabilities $$p(y=k{\mid}x^{(i)}; \theta)$$
+and $$\sum_{k\in(R, B, G)}{p(y=k{\mid}x^{(i)}; \theta)}=1$$</p>
 
 <p>Ellipses represent the 2D Gaussian contour, which captures &gt;99.7% probabilities of the associated Gaussian distribution.</p>
 

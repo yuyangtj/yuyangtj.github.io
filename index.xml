@@ -43,8 +43,8 @@ $$\hat{\mu}_j = \frac{1}{\hat{n}_j}\sum_i\delta(j{\mid}i)x^{(i)}$$
 $$\hat{\sigma}^2_j = \frac{1}{\hat{n}_jd}\sum_i\delta(j{\mid}i){\Vert}x^{(i)}-\mu_j{\Vert}^2$$
 --&gt;
 
-&lt;p&gt;Each symbol represents the conditional probabilities $$p(y=k{\mid}x; \theta)$$
-and $$\sum_{k\in(R, B, G)}{p(y=k{\mid}x; \theta)}=1$$&lt;/p&gt;
+&lt;p&gt;Each symbol represents the conditional probabilities $$p(y=k{\mid}x^{(i)}; \theta)$$
+and $$\sum_{k\in(R, B, G)}{p(y=k{\mid}x^{(i)}; \theta)}=1$$&lt;/p&gt;
 
 &lt;p&gt;Ellipses represent the 2D Gaussian contour, which captures &amp;gt;99.7% probabilities of the associated Gaussian distribution.&lt;/p&gt;
 </description>
