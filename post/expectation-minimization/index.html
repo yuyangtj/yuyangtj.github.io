@@ -29,8 +29,16 @@
     
   
   <meta name="description" content="Visualization of EM (Expectation-Minimization) algorithm.
-Each symbol represents the conditional probabilities $$p(y=k|x; \theta)$$ and $$\sum_{k\in(R, B, G)}{p(y=k|x; \theta)}=1$$
-Ellipses represent the 2D Gaussian contour, which captures &gt;99.7% probabilities of the associated Gaussian distribution.">
+naive version E-step:
+get the conditional probability
+$$ \frac{p_{j}\mathcal{N}(x^{(i)}{\mid}\mu_j,\sigma_jI^2)}{\sum_jp_j\mathcal{N}(x^{(i)}{\mid}\mu_j,\sigma_jI^2)} $$
+assign the class, and $\delta(j{\mid}i)=1$ indicate the test point $x^{(i)}$ was assigned to the class $j$.
+calculate the log-likelihood
+$$\sum_j\sum_i\delta(j{\mid}i)*\mathrm{log}(p_j\mathcal{N}(x^{(i)}{\mid}\mu_j,\sigma_jI^2))$$
+update $p_j$, $\mu_j$, and $\sigma_j$
+$$\hat{n}_j = \sum_i\delta(j{\mid}i)$$ $$\hat{p}_j = \frac{\hat{n}_j}{n}$$ $$\hat{\mu}_j = \frac{1}{\hat{n}_j}\sum_i\delta(j{\mid}i)x^{(i)}$$ $$\hat{\sigma}^2_j = \frac{1}{\hat{n}_jd}\sum_i\delta(j{\mid}i){\Vert}x^{(i)}-\mu_j{\Vert}^2$$
+Each symbol represents the conditional probabilities $$p(y=k{\mid}x; \theta)$$ and $$\sum_{k\in(R, B, G)}{p(y=k{\mid}x; \theta)}=1$$
+Ellipses represent the 2D Gaussian contour, which captures &gt;99.">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/expectation-minimization/">
@@ -113,8 +121,16 @@ Ellipses represent the 2D Gaussian contour, which captures &gt;99.7% probabiliti
   <meta property="og:url" content="/post/expectation-minimization/">
   <meta property="og:title" content="Expectation Minimization | Nudging Towards Data Science">
   <meta property="og:description" content="Visualization of EM (Expectation-Minimization) algorithm.
-Each symbol represents the conditional probabilities $$p(y=k|x; \theta)$$ and $$\sum_{k\in(R, B, G)}{p(y=k|x; \theta)}=1$$
-Ellipses represent the 2D Gaussian contour, which captures &gt;99.7% probabilities of the associated Gaussian distribution."><meta property="og:image" content="/img/icon-192.png">
+naive version E-step:
+get the conditional probability
+$$ \frac{p_{j}\mathcal{N}(x^{(i)}{\mid}\mu_j,\sigma_jI^2)}{\sum_jp_j\mathcal{N}(x^{(i)}{\mid}\mu_j,\sigma_jI^2)} $$
+assign the class, and $\delta(j{\mid}i)=1$ indicate the test point $x^{(i)}$ was assigned to the class $j$.
+calculate the log-likelihood
+$$\sum_j\sum_i\delta(j{\mid}i)*\mathrm{log}(p_j\mathcal{N}(x^{(i)}{\mid}\mu_j,\sigma_jI^2))$$
+update $p_j$, $\mu_j$, and $\sigma_j$
+$$\hat{n}_j = \sum_i\delta(j{\mid}i)$$ $$\hat{p}_j = \frac{\hat{n}_j}{n}$$ $$\hat{\mu}_j = \frac{1}{\hat{n}_j}\sum_i\delta(j{\mid}i)x^{(i)}$$ $$\hat{\sigma}^2_j = \frac{1}{\hat{n}_jd}\sum_i\delta(j{\mid}i){\Vert}x^{(i)}-\mu_j{\Vert}^2$$
+Each symbol represents the conditional probabilities $$p(y=k{\mid}x; \theta)$$ and $$\sum_{k\in(R, B, G)}{p(y=k{\mid}x; \theta)}=1$$
+Ellipses represent the 2D Gaussian contour, which captures &gt;99."><meta property="og:image" content="/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2019-08-18T21:05:29&#43;02:00">
@@ -545,8 +561,28 @@ Ellipses represent the 2D Gaussian contour, which captures &gt;99.7% probabiliti
 
 <p><img src="giphy.gif" alt="" /></p>
 
-<p>Each symbol represents the conditional probabilities $$p(y=k|x; \theta)$$
-and $$\sum_{k\in(R, B, G)}{p(y=k|x; \theta)}=1$$</p>
+<p>naive version
+E-step:</p>
+
+<p>get the conditional probability</p>
+
+<p>$$ \frac{p_{j}\mathcal{N}(x^{(i)}{\mid}\mu_j,\sigma_jI^2)}{\sum_jp_j\mathcal{N}(x^{(i)}{\mid}\mu_j,\sigma_jI^2)} $$</p>
+
+<p>assign the class, and $\delta(j{\mid}i)=1$ indicate the test point $x^{(i)}$ was assigned to the class $j$.</p>
+
+<p>calculate the log-likelihood</p>
+
+<p>$$\sum_j\sum_i\delta(j{\mid}i)*\mathrm{log}(p_j\mathcal{N}(x^{(i)}{\mid}\mu_j,\sigma_jI^2))$$</p>
+
+<p>update $p_j$, $\mu_j$, and $\sigma_j$</p>
+
+<p>$$\hat{n}_j = \sum_i\delta(j{\mid}i)$$
+$$\hat{p}_j = \frac{\hat{n}_j}{n}$$
+$$\hat{\mu}_j = \frac{1}{\hat{n}_j}\sum_i\delta(j{\mid}i)x^{(i)}$$
+$$\hat{\sigma}^2_j = \frac{1}{\hat{n}_jd}\sum_i\delta(j{\mid}i){\Vert}x^{(i)}-\mu_j{\Vert}^2$$</p>
+
+<p>Each symbol represents the conditional probabilities $$p(y=k{\mid}x; \theta)$$
+and $$\sum_{k\in(R, B, G)}{p(y=k{\mid}x; \theta)}=1$$</p>
 
 <p>Ellipses represent the 2D Gaussian contour, which captures &gt;99.7% probabilities of the associated Gaussian distribution.</p>
 
