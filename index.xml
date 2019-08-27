@@ -22,25 +22,26 @@
 
 &lt;p&gt;&lt;img src=&#34;giphy.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;naive version
-E-step:&lt;/p&gt;
+&lt;!--naive version
+E-step:
 
-&lt;p&gt;get the conditional probability&lt;/p&gt;
+get the conditional probability 
 
-&lt;p&gt;$$ \frac{p_{j}\mathcal{N}(x^{(i)}{\mid}\mu_j,\sigma_jI^2)}{\sum_jp_j\mathcal{N}(x^{(i)}{\mid}\mu_j,\sigma_jI^2)} $$&lt;/p&gt;
+$$ \frac{p_{j}\mathcal{N}(x^{(i)}{\mid}\mu_j,\sigma_jI^2)}{\sum_jp_j\mathcal{N}(x^{(i)}{\mid}\mu_j,\sigma_jI^2)} $$
 
-&lt;p&gt;assign the class, and $\delta(j{\mid}i)=1$ indicate the test point $x^{(i)}$ was assigned to the class $j$.&lt;/p&gt;
+assign the class, and $\delta(j{\mid}i)=1$ indicate the test point $x^{(i)}$ was assigned to the class $j$.
 
-&lt;p&gt;calculate the log-likelihood&lt;/p&gt;
+calculate the log-likelihood
 
-&lt;p&gt;$$\sum_j\sum_i\delta(j{\mid}i)*\mathrm{log}(p_j\mathcal{N}(x^{(i)}{\mid}\mu_j,\sigma_jI^2))$$&lt;/p&gt;
+$$\sum_j\sum_i\delta(j{\mid}i)*\mathrm{log}(p_j\mathcal{N}(x^{(i)}{\mid}\mu_j,\sigma_jI^2))$$
 
-&lt;p&gt;update $p_j$, $\mu_j$, and $\sigma_j$&lt;/p&gt;
+update $p_j$, $\mu_j$, and $\sigma_j$
 
-&lt;p&gt;$$\hat{n}_j = \sum_i\delta(j{\mid}i)$$
-$$\hat{p}_j = \frac{\hat{n}_j}{n}$$
-$$\hat{\mu}_j = \frac{1}{\hat{n}_j}\sum_i\delta(j{\mid}i)x^{(i)}$$
-$$\hat{\sigma}^2_j = \frac{1}{\hat{n}_jd}\sum_i\delta(j{\mid}i){\Vert}x^{(i)}-\mu_j{\Vert}^2$$&lt;/p&gt;
+$$\hat{n}_j = \sum_i\delta(j{\mid}i)$$ 
+$$\hat{p}_j = \frac{\hat{n}_j}{n}$$ 
+$$\hat{\mu}_j = \frac{1}{\hat{n}_j}\sum_i\delta(j{\mid}i)x^{(i)}$$ 
+$$\hat{\sigma}^2_j = \frac{1}{\hat{n}_jd}\sum_i\delta(j{\mid}i){\Vert}x^{(i)}-\mu_j{\Vert}^2$$
+--&gt;
 
 &lt;p&gt;Each symbol represents the conditional probabilities $$p(y=k{\mid}x; \theta)$$
 and $$\sum_{k\in(R, B, G)}{p(y=k{\mid}x; \theta)}=1$$&lt;/p&gt;
