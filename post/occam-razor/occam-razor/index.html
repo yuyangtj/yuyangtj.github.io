@@ -28,7 +28,10 @@
   
     
   
-  <meta name="description" content="$$p(D|h1)$$">
+  <meta name="description" content="Demonstating Occam&rsquo;s razor using a nice explanation from KPM [1].
+Imagine that one picks 4 balls from a box of balls, each labeled a number smaller than 50 and gets the result $\mathcal{D} = \{ 16, 8, 32, 4 \} $. The numbers on the balls may follow one of the following hypotheses: &mdash; $\mathcal{h_{two}}$: all number powers of 2
+&mdash; $\mathcal{h_{even}}$: all numbers are even
+&mdash; $\mathcal{h_{four}}$: all numbers are multiples of 4">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/occam-razor/occam-razor/">
@@ -110,7 +113,10 @@
   <meta property="og:site_name" content="Moving Towards Data Science">
   <meta property="og:url" content="/post/occam-razor/occam-razor/">
   <meta property="og:title" content="Occam Razor | Moving Towards Data Science">
-  <meta property="og:description" content="$$p(D|h1)$$"><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:description" content="Demonstating Occam&rsquo;s razor using a nice explanation from KPM [1].
+Imagine that one picks 4 balls from a box of balls, each labeled a number smaller than 50 and gets the result $\mathcal{D} = \{ 16, 8, 32, 4 \} $. The numbers on the balls may follow one of the following hypotheses: &mdash; $\mathcal{h_{two}}$: all number powers of 2
+&mdash; $\mathcal{h_{even}}$: all numbers are even
+&mdash; $\mathcal{h_{four}}$: all numbers are multiples of 4"><meta property="og:image" content="/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2020-03-19T14:18:59&#43;01:00">
@@ -410,7 +416,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    1 min read
+    2 min read
   </span>
   
 
@@ -537,7 +543,74 @@
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      <p>$$p(D|h1)$$</p>
+      
+
+<p>Demonstating Occam&rsquo;s razor using a nice explanation from KPM [1].</p>
+
+<p>Imagine that one picks 4 balls from a box of balls, each labeled a number smaller than 50 and gets the result $\mathcal{D} = \{ 16, 8, 32, 4 \} $. The numbers on the balls may follow one of the following hypotheses: <br />
+&mdash; $\mathcal{h_{two}}$: all number powers of 2<br />
+&mdash; $\mathcal{h_{even}}$: all numbers are even<br />
+&mdash; $\mathcal{h_{four}}$: all numbers are multiples of 4<br />
+Which is the most probable?</p>
+
+<p><img src="occamrazor.gif" alt="" /></p>
+
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+import imageio, glob
+
+# num of balls in the box given hypothesis h_i
+# h(two) : powers of 2
+# h(even) : even numbers
+# h(four) : multiples of 4
+# balls obtained {32, 8, 4, 16}
+
+results = np.array([32, 8, 4, 16])
+N = np.array([5, 29, 13])
+
+# prior: p(h_i)
+prior = np.array([1./3, 1./3, 1./3])
+# probability given hypothsis: p(D|h_i)
+conditional_prob = np.reciprocal(N, dtype = np.float)
+# posterior: p(h_i|D) proportional to p(h_i)p(D|h_i)
+
+def calc_posterior(n):
+    if n == 0:
+        return prior
+    else:
+        return np.einsum('i, i -&gt; i', calc_posterior(n-1) , conditional_prob)
+
+res = ['32', '8', '4', '16']
+for i in range(5):
+   
+    posterior = calc_posterior(i)
+    norm_posterior = posterior / np.sum(posterior)
+    plt.bar([r'$h_{two}$', r'$h_{even}$', r'$h_{four}$'], norm_posterior)
+   
+    plt.text(.85, .9, 'drawed numbers: ' + r'$D = \{ $'+ ', '.join(res[0:i]) +r'$  \}$')
+    plt.text(.85, .83, r'$h_{two}$' + ': powers of 2' + '  ' + r'$p(h|D)=$' + '{:.3f}'.format(norm_posterior[0]))
+    plt.text(.85, .76, r'$h_{even}$' + ': even numbers' + '  ' + r'$p(h|D)=$' + '{:.3f}'.format(norm_posterior[1]))
+    plt.text(.85, .69, r'$h_{four}$' + ': multiples of 4' + '  ' + r'$p(h|D)=$' + '{:.3f}'.format(norm_posterior[2]))
+    plt.title('Occam’s razor favors the simplest hypothesis', fontsize = 14, color = 'navy', fontweight='bold')
+    plt.xlabel('hypothses', fontsize = 14)
+    plt.ylabel('posterior probability', fontsize = 14)
+    plt.ylim(0, 1)
+    plt.yticks(fontsize = 14)
+    plt.xticks(fontsize = 14)
+    plt.tight_layout()  
+    plt.savefig('barplot_{}'.format(i))
+    plt.clf()
+   
+images = []
+for file in sorted(glob.glob('*.png')):
+    images.append(imageio.imread(file))
+   
+imageio.mimsave('movie.gif', images, duration = .7)
+</code></pre>
+
+<h4 id="references">References:</h4>
+
+<p>[1] Murphy, Kevin P. Machine learning: a probabilistic perspective. MIT press, 2012.</p>
 
     </div>
 
