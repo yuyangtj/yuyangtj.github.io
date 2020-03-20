@@ -7,28 +7,28 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>Yang Yu {year} &amp;copy;</copyright>
-    <lastBuildDate>Thu, 19 Mar 2020 14:18:59 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 20 Mar 2020 08:03:55 +0100</lastBuildDate>
     
 	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Occam Razor</title>
-      <link>/post/occam-razor/occam-razor/</link>
-      <pubDate>Thu, 19 Mar 2020 14:18:59 +0100</pubDate>
+      <title>Occam&#39;s zazor</title>
+      <link>/post/occam-razor/</link>
+      <pubDate>Fri, 20 Mar 2020 08:03:55 +0100</pubDate>
       
-      <guid>/post/occam-razor/occam-razor/</guid>
+      <guid>/post/occam-razor/</guid>
       <description>
 
 &lt;p&gt;Demonstating Occam&amp;rsquo;s razor using a nice explanation from KPM [1].&lt;/p&gt;
 
-&lt;p&gt;Imagine that one picks 4 balls from a box of balls, each labeled a number smaller than 50 and gets the result $\mathcal{D} = \{ 16, 8, 32, 4 \} $. The numbers on the balls may follow one of the following hypotheses: &lt;br /&gt;
-&amp;mdash; $\mathcal{h_{two}}$: all number powers of 2&lt;br /&gt;
-&amp;mdash; $\mathcal{h_{even}}$: all numbers are even&lt;br /&gt;
-&amp;mdash; $\mathcal{h_{four}}$: all numbers are multiples of 4&lt;br /&gt;
-Which is the most probable?&lt;/p&gt;
-
 &lt;p&gt;&lt;img src=&#34;occamrazor.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Imagine that one picks 4 balls from a box of balls, each labeled a number smaller than 50 and gets the result $\mathcal{D} = \{ 16, 8, 32, 4 \} $. The numbers on the balls may follow one of the following hypotheses: &lt;br /&gt;
+$\mathcal{h_{two}}$: all number powers of 2&lt;br /&gt;
+$\mathcal{h_{even}}$: all numbers are even&lt;br /&gt;
+$\mathcal{h_{four}}$: all numbers are multiples of 4&lt;br /&gt;
+Which is the most probable?&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import numpy as np
 import matplotlib.pyplot as plt
@@ -76,11 +76,6 @@ for i in range(5):
     plt.savefig(&#39;barplot_{}&#39;.format(i))
     plt.clf()
    
-images = []
-for file in sorted(glob.glob(&#39;*.png&#39;)):
-    images.append(imageio.imread(file))
-   
-imageio.mimsave(&#39;movie.gif&#39;, images, duration = .7)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h4 id=&#34;references&#34;&gt;References:&lt;/h4&gt;
