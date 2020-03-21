@@ -22,12 +22,12 @@
 
 &lt;p&gt;Demonstating Occam&amp;rsquo;s razor using a nice explanation from KPM [1].&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;occamrazor.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;occamrazor.gif&#34; alt=&#34;Occam’s razor&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Imagine that one picks 4 balls from a box of balls, each labeled a number smaller than 50 and gets the result $\mathcal{D} = \{ 16, 8, 32, 4 \} $. The numbers on the balls may follow one of the following hypotheses: &lt;br /&gt;
-$\mathcal{h_{two}}$: all number powers of 2&lt;br /&gt;
-$\mathcal{h_{even}}$: all numbers are even&lt;br /&gt;
-$\mathcal{h_{four}}$: all numbers are multiples of 4&lt;br /&gt;
+&lt;p&gt;Imagine that one picks 4 balls from a box of balls, each labeled a number smaller than 50 and gets the result $\mathcal{D} = \{ 32, 8, 4, 16 \} $. The numbers on the balls may follow one of the following hypotheses: &lt;br /&gt;
+$\mathcal{h_{\mathrm{two}}}$: all number powers of 2&lt;br /&gt;
+$\mathcal{h_{\mathrm{even}}}$: all numbers are even&lt;br /&gt;
+$\mathcal{h_{\mathrm{four}}}$: all numbers are multiples of 4&lt;br /&gt;
 Which is the most probable?&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import numpy as np
@@ -60,12 +60,12 @@ for i in range(5):
    
     posterior = calc_posterior(i)
     norm_posterior = posterior / np.sum(posterior)
-    plt.bar([r&#39;$h_{two}$&#39;, r&#39;$h_{even}$&#39;, r&#39;$h_{four}$&#39;], norm_posterior)
+    plt.bar([r&#39;$h_{\mathrm{two}}$&#39;, r&#39;$h_{\mathrm{even}}$&#39;, r&#39;$h_{\mathrm{four}}$&#39;], norm_posterior)
    
     plt.text(.85, .9, &#39;drawed numbers: &#39; + r&#39;$D = \{ $&#39;+ &#39;, &#39;.join(res[0:i]) +r&#39;$  \}$&#39;)
-    plt.text(.85, .83, r&#39;$h_{two}$&#39; + &#39;: powers of 2&#39; + &#39;  &#39; + r&#39;$p(h|D)=$&#39; + &#39;{:.3f}&#39;.format(norm_posterior[0]))
-    plt.text(.85, .76, r&#39;$h_{even}$&#39; + &#39;: even numbers&#39; + &#39;  &#39; + r&#39;$p(h|D)=$&#39; + &#39;{:.3f}&#39;.format(norm_posterior[1]))
-    plt.text(.85, .69, r&#39;$h_{four}$&#39; + &#39;: multiples of 4&#39; + &#39;  &#39; + r&#39;$p(h|D)=$&#39; + &#39;{:.3f}&#39;.format(norm_posterior[2]))
+    plt.text(.85, .83, r&#39;$h_{\mathrm{two}}$&#39; + &#39;: powers of 2&#39; + &#39;  &#39; + r&#39;$p(h|D)=$&#39; + &#39;{:.3f}&#39;.format(norm_posterior[0]))
+    plt.text(.85, .76, r&#39;$h_{\mathrm{even}}$&#39; + &#39;: even numbers&#39; + &#39;  &#39; + r&#39;$p(h|D)=$&#39; + &#39;{:.3f}&#39;.format(norm_posterior[1]))
+    plt.text(.85, .69, r&#39;$h_{\mathrm{four}}$&#39; + &#39;: multiples of 4&#39; + &#39;  &#39; + r&#39;$p(h|D)=$&#39; + &#39;{:.3f}&#39;.format(norm_posterior[2]))
     plt.title(&#39;Occam’s razor favors the simplest hypothesis&#39;, fontsize = 14, color = &#39;navy&#39;, fontweight=&#39;bold&#39;)
     plt.xlabel(&#39;hypothses&#39;, fontsize = 14)
     plt.ylabel(&#39;posterior probability&#39;, fontsize = 14)
