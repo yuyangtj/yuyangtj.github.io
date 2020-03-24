@@ -13,7 +13,7 @@
     
     
     <item>
-      <title>Occam&#39;s zazor</title>
+      <title>Occam&#39;s razor</title>
       <link>/post/occam-razor/</link>
       <pubDate>Fri, 20 Mar 2020 08:03:55 +0100</pubDate>
       
@@ -67,12 +67,11 @@ for i in range(5):
     plt.text(.85, .76, r&#39;$h_{\mathrm{even}}$&#39; + &#39;: even numbers&#39; + &#39;  &#39; + r&#39;$p(h|D)=$&#39; + &#39;{:.3f}&#39;.format(norm_posterior[1]))
     plt.text(.85, .69, r&#39;$h_{\mathrm{four}}$&#39; + &#39;: multiples of 4&#39; + &#39;  &#39; + r&#39;$p(h|D)=$&#39; + &#39;{:.3f}&#39;.format(norm_posterior[2]))
     plt.title(&#39;Occam’s razor favors the simplest hypothesis&#39;, fontsize = 14, color = &#39;navy&#39;, fontweight=&#39;bold&#39;)
-    plt.xlabel(&#39;hypothses&#39;, fontsize = 14)
-    plt.ylabel(&#39;posterior probability&#39;, fontsize = 14)
+    plt.xlabel(&#39;hypothses&#39;, fontsize = 12)
+    plt.ylabel(&#39;posterior probability&#39;, fontsize = 12)
     plt.ylim(0, 1)
-    plt.yticks(fontsize = 14)
-    plt.xticks(fontsize = 14)
-    plt.tight_layout()  
+    plt.yticks(fontsize = 12)
+    plt.xticks(fontsize = 12) 
     plt.savefig(&#39;barplot_{}&#39;.format(i))
     plt.clf()
    

@@ -112,7 +112,7 @@ $\mathcal{h_{\mathrm{four}}}$: all numbers are multiples of 4">
   
   <meta property="og:site_name" content="Moving Towards Data Science">
   <meta property="og:url" content="/post/occam-razor/">
-  <meta property="og:title" content="Occam&#39;s zazor | Moving Towards Data Science">
+  <meta property="og:title" content="Occam&#39;s razor | Moving Towards Data Science">
   <meta property="og:description" content="Demonstating Occam&rsquo;s razor using a nice explanation from KPM [1].
 Imagine that one picks 4 balls from a box of balls, each labeled a number smaller than 50 and gets the result $\mathcal{D} = \{ 32, 8, 4, 16 \} $. The numbers on the balls may follow one of the following hypotheses: $\mathcal{h_{\mathrm{two}}}$: all number powers of 2
 $\mathcal{h_{\mathrm{even}}}$: all numbers are even
@@ -133,7 +133,7 @@ $\mathcal{h_{\mathrm{four}}}$: all numbers are multiples of 4"><meta property="o
 
 
 
-  <title>Occam&#39;s zazor | Moving Towards Data Science</title>
+  <title>Occam&#39;s razor | Moving Towards Data Science</title>
 
 </head>
 
@@ -384,7 +384,7 @@ $\mathcal{h_{\mathrm{four}}}$: all numbers are multiples of 4"><meta property="o
   
   
 <div class="article-container pt-3">
-  <h1 itemprop="name">Occam&#39;s zazor</h1>
+  <h1 itemprop="name">Occam&#39;s razor</h1>
 
   
 
@@ -442,7 +442,7 @@ $\mathcal{h_{\mathrm{four}}}$: all numbers are multiples of 4"><meta property="o
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=/post/occam-razor/&amp;text=Occam&amp;#39;s%20zazor" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=/post/occam-razor/&amp;text=Occam&amp;#39;s%20razor" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -455,7 +455,7 @@ $\mathcal{h_{\mathrm{four}}}$: all numbers are multiples of 4"><meta property="o
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=/post/occam-razor/&amp;t=Occam&amp;#39;s%20zazor" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=/post/occam-razor/&amp;t=Occam&amp;#39;s%20razor" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook-f"></i>
         </a>
       </li>
@@ -468,7 +468,7 @@ $\mathcal{h_{\mathrm{four}}}$: all numbers are multiples of 4"><meta property="o
       
       
       <li>
-        <a href="mailto:?subject=Occam&amp;#39;s%20zazor&amp;body=/post/occam-razor/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Occam&amp;#39;s%20razor&amp;body=/post/occam-razor/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -481,7 +481,7 @@ $\mathcal{h_{\mathrm{four}}}$: all numbers are multiples of 4"><meta property="o
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=/post/occam-razor/&amp;title=Occam&amp;#39;s%20zazor" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=/post/occam-razor/&amp;title=Occam&amp;#39;s%20razor" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -494,7 +494,7 @@ $\mathcal{h_{\mathrm{four}}}$: all numbers are multiples of 4"><meta property="o
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Occam&amp;#39;s%20zazor%20/post/occam-razor/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Occam&amp;#39;s%20razor%20/post/occam-razor/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -507,7 +507,7 @@ $\mathcal{h_{\mathrm{four}}}$: all numbers are multiples of 4"><meta property="o
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=/post/occam-razor/&amp;title=Occam&amp;#39;s%20zazor" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=/post/occam-razor/&amp;title=Occam&amp;#39;s%20razor" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -592,12 +592,11 @@ for i in range(5):
     plt.text(.85, .76, r'$h_{\mathrm{even}}$' + ': even numbers' + '  ' + r'$p(h|D)=$' + '{:.3f}'.format(norm_posterior[1]))
     plt.text(.85, .69, r'$h_{\mathrm{four}}$' + ': multiples of 4' + '  ' + r'$p(h|D)=$' + '{:.3f}'.format(norm_posterior[2]))
     plt.title('Occam’s razor favors the simplest hypothesis', fontsize = 14, color = 'navy', fontweight='bold')
-    plt.xlabel('hypothses', fontsize = 14)
-    plt.ylabel('posterior probability', fontsize = 14)
+    plt.xlabel('hypothses', fontsize = 12)
+    plt.ylabel('posterior probability', fontsize = 12)
     plt.ylim(0, 1)
-    plt.yticks(fontsize = 14)
-    plt.xticks(fontsize = 14)
-    plt.tight_layout()  
+    plt.yticks(fontsize = 12)
+    plt.xticks(fontsize = 12) 
     plt.savefig('barplot_{}'.format(i))
     plt.clf()
    
