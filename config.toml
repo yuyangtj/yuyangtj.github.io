@@ -1,6 +1,6 @@
 baseURL = 'https://yuyangtj.github.io'
 languageCode = 'en-us'
-title = 'Yang'
+title = 'Yang Yu'
 paginate = 3
 theme = 'maverick'
 
@@ -8,7 +8,7 @@ theme = 'maverick'
   pages = "/:slug"
 
 [params]
-  logo = '/assets/favicon.ico'
+  logo = '/assets/favicon.png'
   description = "A minimal hugo theme focus on content"
   author = 'Calvin Tran'
 
